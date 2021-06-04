@@ -211,3 +211,18 @@ class Contact
         }catch(e){
           console.error(e);
       }
+       //UC3-Ability to create new addressbook array and add contact to it
+    //creating a new array
+    let addressBookArr = new Array();
+    try
+    {
+      let personContact1 = new Contact('Swaraj', 'Mhatre', 'Pen', 'Pen', 'MH', '402107', '91 9999999999', 'swr@gmail.com')
+      let personContact2 = new Contact('Mayur', 'Pawar', 'Kharghar', 'Mumbai', 'MH', '402107', '91 9898989898', 'mayur@gmail.com')
+      addressBookArr.push(personContact1);
+      addressBookArr.push(personContact2);
+    }
+    catch(e)
+    {
+      console.error(e);
+    }
+    console.log(addressBookArr);
