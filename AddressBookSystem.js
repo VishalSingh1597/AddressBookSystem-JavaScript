@@ -226,3 +226,11 @@ class Contact
       console.error(e);
     }
     console.log(addressBookArr);
+
+       //UC4-Find person by contact
+    //creating a function to find cintact by name and passing contact as a parameter
+    function findFirstName(contact)
+    {
+        return contact.firstName.includes("Swaraj")
+    }
+    console.log(addressBookArr.find(findFirstName))
