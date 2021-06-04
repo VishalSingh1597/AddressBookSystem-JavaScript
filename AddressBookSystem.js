@@ -271,3 +271,11 @@ class Contact
                         
     console.log(addressBookArr.filter(contact => contact._state == "MH")
                                .map(contact => contact._firstName))
+
+    //UC10-Get contact count by city and state
+    //applying filter, arrow , reduce function to get count
+    console.log(addressBookArr.filter(contact => contact.city == "Pen")
+                          .reduce((count, contact) => contact.firstName ? ++count : count, 0))
+    //count by state
+    console.log(addressBookArr.filter(contact => contact.state == "MH")
+                              .reduce((count, contact) => contact.firstName ? ++count : count, 0))
