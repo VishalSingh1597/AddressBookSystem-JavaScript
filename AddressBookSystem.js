@@ -245,7 +245,7 @@ class Contact
     let numberOfContacts = addressBookArr.length;
     console.log("Number of Contacts are: "+numberOfContacts);
 
-        //UC-7 To prevent duplicate entry in the Array
+    //UC-7 To prevent duplicate entry in the Array
     //adding duplicate entry to array
     //with if statement and arrow function checking if contact already exists or not
     let personContact3 = new Contact('Swaraj', 'Mhatre', 'Vashi', 'Mumbai', 'MH', '411091', '91 9111111111', 'swaraj@gmail.com')
@@ -255,3 +255,11 @@ class Contact
       console.log("Contact already Exists!");
 
     console.log("Array: ",addressBookArr);
+
+    //UC-8 To Find for the Person in the Address Book 
+    //finding contacts by city
+    let findByCity = addressBookArr.filter((e) => e._city == 'Pen');
+    console.log("Contacts by city: ",findByCity);
+    //finding contacts by state
+    let findByState = addressBookArr.filter((e) => e._state == 'MH');
+    console.log("Contacts by state: ",findByState);	
