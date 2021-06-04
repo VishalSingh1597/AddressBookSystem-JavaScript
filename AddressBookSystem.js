@@ -244,3 +244,14 @@ class Contact
     //using array's length method to find number of contacts
     let numberOfContacts = addressBookArr.length;
     console.log("Number of Contacts are: "+numberOfContacts);
+
+        //UC-7 To prevent duplicate entry in the Array
+    //adding duplicate entry to array
+    //with if statement and arrow function checking if contact already exists or not
+    let personContact3 = new Contact('Swaraj', 'Mhatre', 'Vashi', 'Mumbai', 'MH', '411091', '91 9111111111', 'swaraj@gmail.com')
+    if(!addressBookArr.some(el => el._firstname != "Swaraj"))
+        addressBookArr.push(personContact3);
+    else
+      console.log("Contact already Exists!");
+
+    console.log("Array: ",addressBookArr);
