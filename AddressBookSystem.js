@@ -283,3 +283,10 @@ class Contact
     //UC11-Sorting entries alphabetically
     console.log(addressBookArr.sort((a, b) => a.firstName.localeCompare(b.firstName)));
 
+    //UC12-Sorting contacts by city state and zip
+    console.log("Contact After sorting by city");
+    console.log(addressBookArr.sort((a, b) => a.city.localeCompare(b.city)))
+    console.log("Contact After sorting by state");
+    console.log(addressBookArr.sort((a, b) => a.state.localeCompare(b.state)));
+    console.log("Contact After sorting by zip");
+    console.log(addressBookArr.sort((a, b) => a.zip.localeCompare(b.zip)));
