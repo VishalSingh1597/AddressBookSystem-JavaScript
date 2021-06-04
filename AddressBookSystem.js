@@ -263,3 +263,11 @@ class Contact
     //finding contacts by state
     let findByState = addressBookArr.filter((e) => e._state == 'MH');
     console.log("Contacts by state: ",findByState);	
+
+        //UC-9 view contact name by city and state
+    //applying filter and arrow function and map to get contact
+    console.log(addressBookArr.filter(contact => contact._city == "Pen")
+                                 .map(contact => contact.firstName))
+                        
+    console.log(addressBookArr.filter(contact => contact._state == "MH")
+                               .map(contact => contact._firstName))
