@@ -279,3 +279,7 @@ class Contact
     //count by state
     console.log(addressBookArr.filter(contact => contact.state == "MH")
                               .reduce((count, contact) => contact.firstName ? ++count : count, 0))
+    
+    //UC11-Sorting entries alphabetically
+    console.log(addressBookArr.sort((a, b) => a.firstName.localeCompare(b.firstName)));
+
